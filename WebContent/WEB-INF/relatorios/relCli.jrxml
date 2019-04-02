@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relCli" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="eff9a608-5b14-479e-9514-99abddeb6ada">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="jasper"/>
+	<queryString language="SQL">
+		<![CDATA[select * from Cliente;]]>
+	</queryString>
+	<field name="id" class="java.lang.Long"/>
+	<field name="cpf" class="java.lang.String"/>
+	<field name="dataCadastro" class="java.lang.String"/>
+	<field name="endereco" class="java.lang.String"/>
+	<field name="genero" class="java.lang.String"/>
+	<field name="limiteCredito" class="java.lang.Double"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="cidade_id" class="java.lang.Long"/>
+	<field name="dependente_id" class="java.lang.Long"/>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="cpf">
+		<groupExpression><![CDATA[$F{cpf}]]></groupExpression>
+	</group>
+	<group name="dataCadastro">
+		<groupExpression><![CDATA[$F{dataCadastro}]]></groupExpression>
+	</group>
+	<group name="endereco">
+		<groupExpression><![CDATA[$F{endereco}]]></groupExpression>
+	</group>
+	<group name="genero">
+		<groupExpression><![CDATA[$F{genero}]]></groupExpression>
+	</group>
+	<group name="limiteCredito">
+		<groupExpression><![CDATA[$F{limiteCredito}]]></groupExpression>
+	</group>
+	<group name="nome">
+		<groupExpression><![CDATA[$F{nome}]]></groupExpression>
+	</group>
+	<group name="cidade_id">
+		<groupExpression><![CDATA[$F{cidade_id}]]></groupExpression>
+	</group>
+	<group name="dependente_id">
+		<groupExpression><![CDATA[$F{dependente_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="52" y="23" width="448" height="30" uuid="a20a6259-02e1-4531-971a-9eda44200998"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Relatorio de Clientes]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="72" height="30" uuid="ee18b832-e588-4bf7-aaaa-e9c946dce8cf"/>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="0" width="69" height="30" uuid="6840a244-2e7f-4406-8c3b-231b338385dd"/>
+				<text><![CDATA[dataCadastro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="0" width="69" height="30" uuid="9cdfd562-1320-494b-945f-0238bf769bea"/>
+				<text><![CDATA[endereco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="0" width="69" height="30" uuid="33e44c8d-a694-49fc-a7ef-865b1707ba18"/>
+				<text><![CDATA[genero]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="69" height="30" uuid="2968bcaa-b3ec-46de-9e5d-6cabe2126308"/>
+				<text><![CDATA[limiteCredito]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="348" y="0" width="69" height="30" uuid="56fe7724-be47-4b6d-8b3e-1d12dab4fb02"/>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="0" width="69" height="30" uuid="124d5a0a-da80-4fd2-ab62-dab179eeebbe"/>
+				<text><![CDATA[cidade_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="486" y="0" width="69" height="30" uuid="ec46b45c-dcc3-408c-bade-7d09152a1545"/>
+				<text><![CDATA[dependente_id]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="30" width="72" height="30" uuid="85d1bd53-5142-474a-b931-9fb777957849"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="72" y="30" width="69" height="30" uuid="67205108-c396-436a-9910-4b1bedfbcc4b"/>
+				<textFieldExpression><![CDATA[$F{dataCadastro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="30" width="69" height="30" uuid="957d9d49-491c-4792-abf8-52e8897294a5"/>
+				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="30" width="69" height="30" uuid="e9b7d4e3-12eb-447a-bab6-5b4e029b52ec"/>
+				<textFieldExpression><![CDATA[$F{genero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="30" width="69" height="30" uuid="4cd5a5a3-5a06-4ec1-98ae-6cb8ca8319e3"/>
+				<textFieldExpression><![CDATA[$F{limiteCredito}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="30" width="69" height="30" uuid="59f6c39d-7b1d-4da5-bed1-3a1e3de30c9e"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="30" width="69" height="30" uuid="ecaec6f7-8c72-4716-bff9-a69d7c7a39aa"/>
+				<textFieldExpression><![CDATA[$F{cidade_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="486" y="30" width="69" height="30" uuid="a968ea85-4516-4c6a-a880-38698afd2a47"/>
+				<textFieldExpression><![CDATA[$F{dependente_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

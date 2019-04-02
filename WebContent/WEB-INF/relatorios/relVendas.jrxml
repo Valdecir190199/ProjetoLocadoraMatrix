@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relVendas" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="59ee130c-bc09-4b60-8c2b-3ae5bed3ec7c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="jasper"/>
+	<queryString language="SQL">
+		<![CDATA[select * from Venda]]>
+	</queryString>
+	<field name="id" class="java.lang.Long"/>
+	<field name="dataVenda" class="java.sql.Timestamp"/>
+	<field name="observacao" class="java.lang.String"/>
+	<field name="valorTotalVenda" class="java.lang.Double"/>
+	<field name="cliente_id" class="java.lang.Long"/>
+	<field name="vendedor_id" class="java.lang.Long"/>
+	<variable name="dataVenda1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{dataVenda}]]></variableExpression>
+	</variable>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="dataVenda">
+		<groupExpression><![CDATA[$F{dataVenda}]]></groupExpression>
+	</group>
+	<group name="observacao">
+		<groupExpression><![CDATA[$F{observacao}]]></groupExpression>
+	</group>
+	<group name="valorTotalVenda">
+		<groupExpression><![CDATA[$F{valorTotalVenda}]]></groupExpression>
+	</group>
+	<group name="cliente_id">
+		<groupExpression><![CDATA[$F{cliente_id}]]></groupExpression>
+	</group>
+	<group name="vendedor_id">
+		<groupExpression><![CDATA[$F{vendedor_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="49" y="27" width="411" height="30" uuid="f7dc7ae7-35ec-4bd6-81bc-b8de68f7efdb"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Sistema Matrix]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="56" y="6" width="434" height="30" uuid="ff0c80c0-3dd1-4be1-bd3f-e26c6804e3be"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Relatorio de Locação]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="147" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="141" height="30" uuid="7c9ae605-a9df-4a25-a1bd-e3d06ffd3b56"/>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="0" width="138" height="30" uuid="ac3f06ad-f994-437a-8da2-7fa6557c26f9"/>
+				<text><![CDATA[dataVenda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="138" height="30" uuid="143d3542-3084-44a5-8576-547e7b6f1634"/>
+				<text><![CDATA[observacao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="0" width="138" height="30" uuid="5388fee1-2926-429c-bd59-72640f29d9bd"/>
+				<text><![CDATA[valorTotalVenda]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="3" width="141" height="30" uuid="cb12a3ef-4b7e-46e5-aec7-0c484a1e5735"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="3" width="138" height="30" uuid="925a5db8-ff10-457a-b924-73c2b2a7b7f7"/>
+				<textFieldExpression><![CDATA[$F{dataVenda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="3" width="138" height="30" uuid="6ffaa098-9d4e-4685-8ff4-8c54a2f2d97c"/>
+				<textFieldExpression><![CDATA[$F{observacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="3" width="138" height="30" uuid="cde983a9-adec-451a-8e04-43ac15a0fae4"/>
+				<textFieldExpression><![CDATA[$F{valorTotalVenda}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://java.sun.com/jsf/html"> 
+
+
+
+<ui:composition template="template.xhtml">
+	<ui:define name="corpo">
+
+<h1>Aqui Ficam os Relatorios</h1>
+
+<br></br>
+
+
+
+
+<p>Relatorio de Cliente</p>
+
+<h:form>
+			<p:commandButton value="Relatório de todos os Clientes" 
+			actionListener="#{clienteMB.chamarRelatorio()}"
+			ajax="false"/>
+		</h:form>
+
+<p>Relatorio de Locações</p>
+
+<h:form>
+			<p:commandButton value="Relatório de todas as Locações" 
+			actionListener="#{vendaMB.chamarRelatorio()}"
+			ajax="false"/>
+		</h:form>
+</ui:define>
+</ui:composition>
+</html>
